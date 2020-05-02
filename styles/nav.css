@@ -1,0 +1,31 @@
+.navigation {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    min-height: 8vh;
+}
+.navigation li {
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+    background-color: black;
+    padding: 10px 0px;
+    margin: auto 1px;
+}
+.navtab {
+    font-size: 20pt;
+    color: whitesmoke;
+    text-decoration: none;
+    margin-right: auto;
+}
+@media(max-width: 750px) {
+    .navtab{
+        font-size: 14pt;
+    }
+}
+
+@media(max-width: 550px) {
+    .navtab{
+        font-size: 10pt;
+    }
+}
