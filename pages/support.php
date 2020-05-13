@@ -8,22 +8,9 @@
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
     </head>
     <body>
-        <header>
-            <ul class="navigation">
-                <li>
-                    <a class="navtab" href="../index.php">ГЛАВНАЯ</a>
-                </li>
-                <li>
-                    <a class="navtab" href="./team.php">КОМАНДА</a>
-                </li>
-                <li>
-                    <a class="navtab" href="./support.php">ПОДДЕРЖКА</a>
-                </li>
-                <li>
-                    <a class="navtab" href="./labs.php">ЛАБОРАТОРНЫЕ</a>
-                </li>
-            </ul>
-        </header>
+        <?php 
+            include '../styles/navigation.php';
+        ?>
         <main>
             <h2 class="block-main-header">Свяжитесь с нами:</h2>
             <form class="user-form" action="" method="POST">

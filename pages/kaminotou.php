@@ -10,16 +10,16 @@
     <body>
         <header>
             <ul class="navigation">
-                <li>
+                <li class="navigation_item">
                     <a class="navtab" href="../index.php">ГЛАВНАЯ</a>
                 </li>
-                <li>
+                <li class="navigation_item">
                     <a class="navtab" href="./team.php">КОМАНДА</a>
                 </li>
-                <li>
+                <li class="navigation_item">
                     <a class="navtab" href="./support.php">ПОДДЕРЖКА</a>
                 </li>
-                <li>
+                <li class="navigation_item">
                     <a class="navtab" href="./labs.php">ЛАБОРАТОРНЫЕ</a>
                 </li>
             </ul>
