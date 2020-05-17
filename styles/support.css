@@ -32,6 +32,9 @@ main {
     background-color: transparent;
     border-bottom: 2px solid black;
 }
+.user-form_input:invalid:not(:focus):not(:placeholder-shown) {
+    background-color: pink;
+}
 .user-form_submit{
     margin: 20px 0;
     border: 2px solid black;
