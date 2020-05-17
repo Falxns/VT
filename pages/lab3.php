@@ -2,7 +2,7 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Лабораторные</title>
+        <title>Лабораторная работа 3</title>
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
@@ -12,8 +12,7 @@
             include '../styles/navigation.php';
         ?>
         <main>
-            <a class="labs-link" href="/VT/pages/lab2.php">Лабораторная работа 2</a>
-            <a class="labs-link" href="/VT/pages/lab3.php">Лабораторная работа 3</a>
+
         </main>
         <footer class="footer-container">
             <a class="contacts" href="https://vk.com/maxim_falonse" target="_blank">
