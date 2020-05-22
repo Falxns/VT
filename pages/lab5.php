@@ -29,6 +29,28 @@
                         exit('Connection error.');
                     }
                     $mysqli->set_charset('utf8');
+
+                    if ( isset($_GET["text-input"]) ) {
+                        $userquery = $_GET["text-input"];
+                        if ( preg_match("/--|\/\*/", $userquery) ) {
+                            exit('You were trying to inject SQL.');
+                        } else {
+                            if ($userquery === '') {
+                                exit('Blank SQL query!');
+                            }
+                            $started = microtime(true);
+                            $result = $mysqli->query($userquery);
+                            $end = microtime(true);
+                            $mem_usage = memory_get_usage();
+                            $difference = $end - $started;
+                            $queryTime = number_format($difference, 10);
+                            if (!$result) {
+                                echo 'Incorrect SQL query.';
+                            } else {
+                                echo "SQL query access! ^-^ Time: $queryTime, Memory usage: $mem_usage";
+                            }
+                        }
+                    }
                     $result = $mysqli->query("SELECT table_titles.id AS id, table_titles.name AS name, table_titles.date_release AS date, table_studios.name AS studio
                         FROM table_titles, table_studios
                         WHERE table_titles.studio_id=table_studios.id
@@ -42,7 +64,7 @@
                     $creationsTable .= "</table>";
 
                     $result = $mysqli->query("SELECT id, name, date_registration, anime_number
-                    FROM table_studios");
+                        FROM table_studios");
                     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     $articlesTable = "<table>";
                     $articlesTable .= "<tr><td class='lab-table_head'>ID</td><td class='lab-table_head'>Studio name</td><td class='lab-table_head'>Registration date</td><td class='lab-table_head'>Number of animes</td></tr>";
