@@ -1,0 +1,43 @@
+.navigation {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    min-height: 8vh;
+}
+.navigation_item {
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+    background-color: black;
+    padding: 10px 0px;
+    margin: auto 1px;
+}
+.navtab {
+    font-size: 20pt;
+    color: whitesmoke;
+    text-decoration: none;
+    margin-right: auto;
+}
+.active {
+    border-bottom: 5px solid;
+    border-color: #f00;
+}
+.labs-link {
+    font-size: 25pt;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+@media(max-width: 750px) {
+    .navtab{
+        font-size: 14pt;
+    }
+}
+
+@media(max-width: 550px) {
+    .navtab{
+        font-size: 10pt;
+    }
+}
