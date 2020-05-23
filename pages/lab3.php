@@ -1,4 +1,7 @@
 <?php
+    include './lab6route.php';
+?>
+<?php
     const HOLIDAYS_FILE_NAME = '../holidays.txt';
     const DATE_FORMAT = 'd.m.Y';
     const HOLIDAY_FORMAT = 'd-m';

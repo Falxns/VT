@@ -5,21 +5,25 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Лабораторные</title>
+        <title>Лабораторная работа 6</title>
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
     </head>
     <body>
-        <?php 
+        <?php
             include '../styles/navigation.php';
         ?>
         <main>
-            <a class="labs-link" href="/VT/pages/lab2.php">Лабораторная работа 2</a>
-            <a class="labs-link" href="/VT/pages/lab3.php">Лабораторная работа 3</a>
-            <a class="labs-link" href="/VT/pages/lab4.php">Лабораторная работа 4</a>
-            <a class="labs-link" href="/VT/pages/lab5.php">Лабораторная работа 5</a>
-            <a class="labs-link" href="/VT/pages/lab6.php">Лабораторная работа 6</a>
+            <form action="<?php $_PHP_SELF ?>" method="POST" id="lab-6" class="user-form">
+                <h2 class="block-main-header">Лабораторная работа 6, вариант 9</h2>
+                <?php
+                    session_start();
+                    foreach($_SESSION['data'] as $key=>$value) {
+                        echo "<p class='user-form-label'><strong>Page:</strong> $value[0], <strong>Time:</strong> $value[1]</p>";
+                    }
+                ?>
+            </form>
         </main>
         <footer class="footer-container">
             <a class="contacts" href="https://vk.com/maxim_falonse" target="_blank">

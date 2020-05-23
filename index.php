@@ -1,3 +1,6 @@
+<?php
+    include './pages/lab6route.php';
+?>
 <!DOCTYPE html>
 <meta charset="utf-8"/>
 <html>
