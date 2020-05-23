@@ -20,6 +20,7 @@
             <a class="labs-link" href="/VT/pages/lab4.php">Лабораторная работа 4</a>
             <a class="labs-link" href="/VT/pages/lab5.php">Лабораторная работа 5</a>
             <a class="labs-link" href="/VT/pages/lab6.php">Лабораторная работа 6</a>
+            <a class="labs-link" href="/VT/pages/lab7.php">Лабораторная работа 7</a>
         </main>
         <footer class="footer-container">
             <a class="contacts" href="https://vk.com/maxim_falonse" target="_blank">
