@@ -1,6 +1,9 @@
 <?php
     include './lab6route.php';
 ?>
+<?php
+    include './language.php';
+?>
 <!DOCTYPE html>
 <meta charset="utf-8"/>
 <html>
@@ -9,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
+        <link rel="stylesheet" type="text/css" href="../styles/support.css">
     </head>
     <body>
         <?php
@@ -20,7 +24,7 @@
                 <?php
                     session_start();
                     foreach($_SESSION['data'] as $key=>$value) {
-                        echo "<p class='user-form-label'><strong>Page:</strong> $value[0], <strong>Time:</strong> $value[1]</p>";
+                        echo "<p class='user-form_label'><strong>Page:</strong> $value[0], <strong>Time:</strong> $value[1]</p>";
                     }
                 ?>
             </form>

@@ -2,6 +2,9 @@
     include './lab6route.php';
 ?>
 <?php
+    include './language.php';
+?>
+<?php
     const HOLIDAYS_FILE_NAME = '../holidays.txt';
     const DATE_FORMAT = 'd.m.Y';
     const HOLIDAY_FORMAT = 'd-m';
@@ -111,6 +114,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
+        <link rel="stylesheet" type="text/css" href="../styles/support.css">
     </head>
     <body>
         <?php 

@@ -1,6 +1,9 @@
 <?php
     include './lab6route.php';
 ?>
+<?php
+    include './language.php';
+?>
 <!DOCTYPE html>
 <meta charset="utf-8"/>
 <html>
@@ -9,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
+        <link rel="stylesheet" type="text/css" href="../styles/support.css">
     </head>
     <body>
         <?php 
@@ -21,6 +25,7 @@
             <a class="labs-link" href="/VT/pages/lab5.php">Лабораторная работа 5</a>
             <a class="labs-link" href="/VT/pages/lab6.php">Лабораторная работа 6</a>
             <a class="labs-link" href="/VT/pages/lab7.php">Лабораторная работа 7</a>
+            <a class="labs-link" href="/VT/pages/lab8.php">Лабораторная работа 8</a>
         </main>
         <footer class="footer-container">
             <a class="contacts" href="https://vk.com/maxim_falonse" target="_blank">

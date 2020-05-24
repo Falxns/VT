@@ -1,6 +1,9 @@
 <?php
     include './pages/lab6route.php';
 ?>
+<?php
+    include './pages/language.php';
+?>
 <!DOCTYPE html>
 <meta charset="utf-8"/>
 <html>
@@ -9,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="./styles/main.css">
         <link rel="stylesheet" type="text/css" href="./styles/nav.css">
         <link rel="stylesheet" type="text/css" href="./styles/footer.css">
+        <link rel="stylesheet" type="text/css" href="./styles/support.css">
     </head>
     <body>
         <?php 
