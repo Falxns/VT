@@ -45,15 +45,8 @@
                 <p class="anime-container_description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ea optio minima perferendis rem. Commodi dignissimos iure magni facilis delectus! Tempore assumenda nihil ex sint quidem minima inventore. Tempora, vero. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quam consectetur obcaecati in deserunt fugiat quaerat. Architecto id distinctio totam recusandae praesentium, aliquid possimus minus obcaecati, vero, eligendi impedit esse.</p>
             </div>
         </main>
-        <footer class="footer-container">
-            <a class="contacts" href="https://vk.com/maxim_falonse" target="_blank">
-                <img class="icon" src="../vk-logo.png">
-            </a>
-            <a class="contacts" href="https://www.instagram.com/falxns_/" target="_blank">
-                <img class="icon" src="../inst-logo.png">
-            </a>
-            <p class="email">maks.falonse@gmail.com</p>
-            <p class="phone">+375295656229</p>
-        </footer>
+        <?php 
+            include '../styles/footer.php';
+        ?>
     </body>
 </html>
