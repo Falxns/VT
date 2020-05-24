@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
+        <link rel="stylesheet" type="text/css" href="../styles/lab7.css">
     </head>
     <body>
         <?php
@@ -25,6 +26,17 @@
                 <input class="user-form_input" type="text" name="user-theme" id="user-theme" require>
                 <label class="user-form_label" for="user-message">Письмо:</label>
                 <textarea class="user-form_input" name="user-message" id="user-message" cols="60" rows="10" require></textarea>
+                <?php
+                    $randomable = rand(0,4);
+                    $arrcaptcha = array();
+                    $arrcaptcha[0] = 'fm33xx';
+                    $arrcaptcha[1] = 'bc248d';
+                    $arrcaptcha[2] = '24d3dv';
+                    $arrcaptcha[3] = 'qwm36j';
+                    $arrcaptcha[4] = 'kh19lf';
+                ?>
+                <img src="../captcha/image<?php echo $randomable ?>.png" id="img-captcha"></img>
+                <input class="user-form_input" type="text" name="user-captcha" id="user-captcha" require>
                 <input class="user-form_submit" type="submit" value="Send">
                 <?php
                     use PHPMailer\PHPMailer\PHPMailer;
@@ -32,12 +44,13 @@
                     use PHPMailer\PHPMailer\Exception;
                     require '../vendor/autoload.php';
 
-                    if (isset($_POST['user-emailfrom']) && isset($_POST['user-emailto']) && isset($_POST['user-theme']) && isset($_POST['user-message'])) {
+                    if (isset($_POST['user-emailfrom']) && isset($_POST['user-emailto']) && isset($_POST['user-theme']) && isset($_POST['user-message']) && isset($_POST['user-captcha'])) {
                         $emailfrom = $_POST['user-emailfrom'];
                         $emailto = $_POST['user-emailto'];
                         $theme = $_POST['user-theme'];
                         $message = $_POST['user-message'];
-                        if (filter_var($emailfrom, FILTER_VALIDATE_EMAIL) && filter_var($emailto, FILTER_VALIDATE_EMAIL) && trim($theme) !== "" && trim($message) !== "") {
+                        $captcha = $_POST['user-captcha'];
+                        if (filter_var($emailfrom, FILTER_VALIDATE_EMAIL) && filter_var($emailto, FILTER_VALIDATE_EMAIL) && trim($theme) !== "" && trim($message) !== "" && strcasecmp($captcha,$arrcaptcha[$randomable]) === 0) {
                             $letter = new PHPMailer();
                             $letter->CharSet = "UTF-8";
                             $letter->isSMTP();
@@ -61,7 +74,7 @@
                                 echo "<p class='user-form-label'>Letter wasn't sent :c Check your data.</p>";
                             } 
                         } else {
-                            echo "<p class='user-form-label'>Emails or letter was filled incorrect.</p>";
+                            echo "<p class='user-form-label'>Emails or letter was filled incorrect. Also check captcha!</p>";
                         }
                     }
                 ?>
