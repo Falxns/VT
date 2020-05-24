@@ -5,11 +5,13 @@
         $_SESSION['lang'] = $lang;
     } elseif (isset($_SESSION['lang']) && ($_SESSION['lang'] === 'en' || $_SESSION['lang'] === 'ru')) {
         $lang = $_SESSION['lang'];
-    } 
+    }
 
     if (isset($lang)) {
         $textLanguage = parse_ini_file("C:/Server/data/htdocs/VT/languages/" . $lang . ".ini");
     } else {
+        $textLanguage = parse_ini_file("C:/Server/data/htdocs/VT/languages/ru.ini");
+        
 		$languageSelect = sprintf('<form class="user-form" method="POST" action="%s">', $_SERVER['SCRIPT_NAME']);
 		$languageSelect .= '<h2 class="block-main-header">Choose website language:</h2>';
 		$languageSelect .= '<select class="user-form_input" id="language" name="language">';
