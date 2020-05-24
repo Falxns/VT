@@ -8,7 +8,7 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Главная</title>
+        <title><?php echo $textLanguage["MAIN_TITLE"]; ?></title>
         <link rel="stylesheet" type="text/css" href="./styles/main.css">
         <link rel="stylesheet" type="text/css" href="./styles/nav.css">
         <link rel="stylesheet" type="text/css" href="./styles/footer.css">
@@ -21,55 +21,55 @@
         <main>
             <section class="block-main">
                 <div class="block-main-header">
-                    <p>Обновления аниме</p>
+                    <p><?php echo $textLanguage["MAIN_UPDATE"]; ?></p>
                 </div>
                 <ul class="main-item">
 					<li>
                         <a class="item" href="./pages/kaminotou.php">
-                            <span class="date">3 мая</span>
+                            <span class="date">3<?php echo $textLanguage["MAIN_DATE_MAY"]; ?></span>
                             <img class="picture" src="./titles/kaminotou.jpg">
-                            <span class="announcement"><strong>Башня бога</strong> - Добавлена 2-я серия.</span>
+                            <span class="announcement"><strong><?php echo $textLanguage["MAIN_TITLES_KAMINOTOU"]; ?></strong><?php echo $textLanguage["MAIN_ADDEDSERIES"]; ?>2.</span>
                         </a>
                     </li>
                     <li>
                         <a class="item" href="./pages/kaminotou.php">
-                            <span class="date">2 мая</span>
+                            <span class="date">2<?php echo $textLanguage["MAIN_DATE_MAY"]; ?></span>
                             <img class="picture" src="./titles/kaminotou.jpg">
-                            <span class="announcement"><strong>Башня бога</strong> - Добавлена 1-я серия.</span>
+                            <span class="announcement"><strong><?php echo $textLanguage["MAIN_TITLES_KAMINOTOU"]; ?></strong><?php echo $textLanguage["MAIN_ADDEDSERIES"]; ?>1.</span>
                         </a>
                     </li>
                     <li>
                         <a class="item" href="./pages/evangelion.php">
-                            <span class="date">25 мар</span>
+                            <span class="date">25<?php echo $textLanguage["MAIN_DATE_MARCH"]; ?></span>
                             <img class="picture" src="./titles/evangelion.jpg">
-                            <span class="announcement"><strong>Евангелион</strong> - Добавлена 3-я серия.</span>
+                            <span class="announcement"><strong><?php echo $textLanguage["MAIN_TITLES_EVA"]; ?></strong><?php echo $textLanguage["MAIN_ADDEDSERIES"]; ?>3.</span>
                         </a>
                     </li>
                     <li>
                         <a class="item" href="./pages/evangelion.php">
-                            <span class="date">24 мар</span>
+                            <span class="date">24<?php echo $textLanguage["MAIN_DATE_MARCH"]; ?></span>
                             <img class="picture" src="./titles/evangelion.jpg">
-                            <span class="announcement"><strong>Евангелион</strong> - Добавлена 2-я серия.</span>
+                            <span class="announcement"><strong><?php echo $textLanguage["MAIN_TITLES_EVA"]; ?></strong><?php echo $textLanguage["MAIN_ADDEDSERIES"]; ?>2.</span>
                         </a>
                     </li>
                     <li>
                         <a class="item" href="./pages/evangelion.php">
-                            <span class="date">23 мар</span>
+                            <span class="date">23<?php echo $textLanguage["MAIN_DATE_MARCH"]; ?></span>
                             <img class="picture" src="./titles/evangelion.jpg">
-                            <span class="announcement"><strong>Евангелион</strong> - Добавлена 1-я серия.</span>
+                            <span class="announcement"><strong><?php echo $textLanguage["MAIN_TITLES_EVA"]; ?></strong><?php echo $textLanguage["MAIN_ADDEDSERIES"]; ?>1.</span>
                         </a>
                     </li>
                 </ul>
             </section>
             <section class="block-main">
                 <div class="block-main-header">
-                    <p>Новости</p>
+                    <p><?php echo $textLanguage["MAIN_NEWS"]; ?></p>
                 </div>
                 <ul class="main-item">
                     <li>
                         <a class="item">
-                            <span class="date">20 мар</span>
-                            <span class="news-announcement">Весной выходит 2-й сезон Re:Zero.</span>
+                            <span class="date">20<?php echo $textLanguage["MAIN_DATE_MARCH"]; ?></span>
+                            <span class="news-announcement"><?php echo $textLanguage["MAIN_NEWS_1"]; ?></span>
                         </a>
                     </li>
                 </ul>
