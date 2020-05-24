@@ -8,7 +8,7 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Лабораторная работа 8</title>
+        <title><?php echo $textLanguage["LABS_LAB"];?>8</title>
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
@@ -20,8 +20,8 @@
         ?>
         <main>
             <form action="<?php $_PHP_SELF ?>" method="POST" id="lab-8" class="user-form">
-                <h2 class="block-main-header">Лабораторная работа 8, вариант 1</h2>
-                <label class="user-form_label" for="number-input">Перевод данного сайта ^-^</label>
+                <h2 class="block-main-header"><?php echo $textLanguage["LABS_LAB"];?>8,<?php echo $textLanguage["LABS_VAR"];?>1</h2>
+                <label class="user-form_label" for="number-input"><?php echo $textLanguage["LABS_TRANSL"];?></label>
             </form>
         </main>
         <?php 

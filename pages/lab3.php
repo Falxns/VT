@@ -110,7 +110,7 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Лабораторная работа 3</title>
+        <title><?php echo $textLanguage["LABS_LAB"];?>3</title>
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
@@ -122,10 +122,10 @@
         ?>
         <main>
             <form action="<?php $_PHP_SELF ?>" id="lab-3" class="user-form">
-                <h2 class="block-main-header">Лабораторная работа 3, вариант 9</h2>
-                <label class="user-form_label" for="date-input">Введите дату доставки: </label>
+                <h2 class="block-main-header"><?php echo $textLanguage["LABS_LAB"];?>3,<?php echo $textLanguage["LABS_VAR"];?>9</h2>
+                <label class="user-form_label" for="date-input"><?php echo $textLanguage["LABS_DELIVERY"];?></label>
                 <input class="user-form_input" type="text" name="date" id="date" placeholder="ДД.ММ.ГГГГ" pattern="\d\d\.\d\d\.\d\d\d\d" title="ДД.ММ.ГГГГ" required value=<?php echo get_date()?>>
-                <input class="user-form_submit" type="submit" value="Send">
+                <input class="user-form_submit" type="submit" value="<?php echo $textLanguage["LABS_SEND"];?>">
                 <?php
                     if (isset($_GET['date']))
                     {

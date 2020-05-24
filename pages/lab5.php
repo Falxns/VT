@@ -8,7 +8,7 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Лабораторная работа 5</title>
+        <title><?php echo $textLanguage["LABS_LAB"];?>5</title>
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
@@ -21,10 +21,10 @@
         ?>
         <main>
             <form action="<?php $_PHP_SELF ?>" method="GET" id="lab-5" class="user-form">
-                <h2 class="block-main-header">Лабораторная работа 5, вариант 9</h2>
-                <label class="user-form_label" for="text-input">Введите SQL-запрос: </label>
+                <h2 class="block-main-header"><?php echo $textLanguage["LABS_LAB"];?>5,<?php echo $textLanguage["LABS_VAR"];?>9</h2>
+                <label class="user-form_label" for="text-input"><?php echo $textLanguage["LABS_SQL"];?></label>
                 <input class="user-form_input" type="text" name="text-input" id="text-input"></input>
-                <input class="user-form_submit" type="submit" value="Send">
+                <input class="user-form_submit" type="submit" value="<?php echo $textLanguage["LABS_SEND"];?>">
                 <?php
                     define('DB_HOST', 'localhost');
                     define('DB_USER', 'root');

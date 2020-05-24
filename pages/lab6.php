@@ -8,7 +8,7 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Лабораторная работа 6</title>
+        <title><?php echo $textLanguage["LABS_LAB"];?>6</title>
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
@@ -20,7 +20,7 @@
         ?>
         <main>
             <form action="<?php $_PHP_SELF ?>" method="POST" id="lab-6" class="user-form">
-                <h2 class="block-main-header">Лабораторная работа 6, вариант 9</h2>
+                <h2 class="block-main-header"><?php echo $textLanguage["LABS_LAB"];?>6,<?php echo $textLanguage["LABS_VAR"];?>9</h2>
                 <?php
                     session_start();
                     foreach($_SESSION['data'] as $key=>$value) {

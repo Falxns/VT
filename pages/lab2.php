@@ -8,7 +8,7 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Лабораторная работа 2</title>
+        <title><?php echo $textLanguage["LABS_LAB"];?>2</title> 
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
@@ -20,10 +20,10 @@
         ?>
         <main>
             <form action="<?php $_PHP_SELF ?>" method="GET" id="lab-2" class="user-form">
-                <h2 class="block-main-header">Лабораторная работа 2, вариант 9</h2>
-                <label class="user-form_label" for="number-input">Введите число: </label>
+                <h2 class="block-main-header"><?php echo $textLanguage["LABS_LAB"];?>2,<?php echo $textLanguage["LABS_VAR"];?>9</h2>
+                <label class="user-form_label" for="number-input"><?php echo $textLanguage["LABS_NUMBER"];?></label>
                 <input class="user-form_input" name="number-input" pattern="^[0-9]+$">
-                <input class="user-form_submit" type="submit" value="Send">
+                <input class="user-form_submit" type="submit" value="<?php echo $textLanguage["LABS_SEND"];?>">
                 <?php
                     if( isset($_GET["number-input"])) {
                         $number = $_GET["number-input"];
@@ -31,7 +31,7 @@
                         for ($i = 0; $i < strlen($number); $i++) {
                             $answer += $number[$i];
                         }
-                        echo "<label class='user-form_label'>Ответ: $answer</label>";
+                        echo "<label class='user-form_label'>Answer is: $answer</label>";
                     }
                 ?>
             </form>
