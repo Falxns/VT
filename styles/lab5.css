@@ -1,0 +1,19 @@
+.user-form_input {
+    width: 500px;
+}
+table {
+    width: 97%;
+    margin: 10px auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+.lab-table_head {
+    background-color: #808080;
+    border: 2px solid rgb(71, 71, 71);
+    padding: 8px 0;
+}
+td {
+    background-color: #DCDCDC;
+    border: 2px solid rgb(71, 71, 71);
+    padding: 5px 0;
+}
