@@ -8,25 +8,20 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title><?php echo $textLanguage["LABS_LAB"];?>6</title>
+        <title><?php echo $textLanguage["LABS_LAB"];?>8</title>
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
     </head>
     <body>
-        <?php
+        <?php 
             include '../styles/navigation.php';
         ?>
         <main>
-            <form action="<?php $_PHP_SELF ?>" method="POST" id="lab-6" class="user-form">
-                <h2 class="block-main-header"><?php echo $textLanguage["LABS_LAB"];?>6,<?php echo $textLanguage["LABS_VAR"];?>9</h2>
-                <?php
-                    session_start();
-                    foreach($_SESSION['data'] as $key=>$value) {
-                        echo "<p class='user-form_label'><strong>Page:</strong> $value[0], <strong>Time:</strong> $value[1]</p>";
-                    }
-                ?>
+            <form action="<?php $_PHP_SELF ?>" method="POST" id="lab-8" class="user-form">
+                <h2 class="block-main-header"><?php echo $textLanguage["LABS_LAB"];?>8,<?php echo $textLanguage["LABS_VAR"];?>1</h2>
+                <label class="user-form_label" for="number-input"><?php echo $textLanguage["LABS_TRANSL"];?></label>
             </form>
         </main>
         <?php 

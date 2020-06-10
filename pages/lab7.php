@@ -1,14 +1,18 @@
 <?php
     include './lab6route.php';
 ?>
+<?php
+    include './language.php';
+?>
 <!DOCTYPE html>
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Лабораторная работа 7</title>
+        <title><?php echo $textLanguage["LABS_LAB"];?>7</title>
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
+        <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/lab7.css">
     </head>
     <body>
@@ -17,14 +21,14 @@
         ?>
         <main>
             <form action="<?php $_PHP_SELF ?>" method="POST" id="lab-7" class="user-form">
-                <h2 class="block-main-header">Лабораторная работа 7, вариант 4</h2>
-                <label class="user-form_label" for="user-emailfrom">От кого (пр. user@gmail.com):</label>
+                <h2 class="block-main-header"><?php echo $textLanguage["LABS_LAB"];?>7,<?php echo $textLanguage["LABS_VAR"];?>4</h2>
+                <label class="user-form_label" for="user-emailfrom"><?php echo $textLanguage["LABS_EFROM"];?></label>
                 <input class="user-form_input" type="email" name="user-emailfrom" id="user-emailfrom" require>
-                <label class="user-form_label" for="user-emailto">Кому (пр. user@gmail.com):</label>
+                <label class="user-form_label" for="user-emailto"><?php echo $textLanguage["LABS_ETO"];?></label>
                 <input class="user-form_input" type="email" name="user-emailto" id="user-emailto" require>
-                <label class="user-form_label" for="user-theme">Тема:</label>
+                <label class="user-form_label" for="user-theme"><?php echo $textLanguage["LABS_SUBJ"];?></label>
                 <input class="user-form_input" type="text" name="user-theme" id="user-theme" require>
-                <label class="user-form_label" for="user-message">Письмо:</label>
+                <label class="user-form_label" for="user-message"><?php echo $textLanguage["LABS_MSG"];?></label>
                 <textarea class="user-form_input" name="user-message" id="user-message" cols="60" rows="10" require></textarea>
                 <?php
                     $randomable = rand(0,4);
@@ -37,7 +41,7 @@
                 ?>
                 <img src="../captcha/image<?php echo $randomable ?>.png" id="img-captcha"></img>
                 <input class="user-form_input" type="text" name="user-captcha" id="user-captcha" require>
-                <input class="user-form_submit" type="submit" value="Send">
+                <input class="user-form_submit" type="submit" value="<?php echo $textLanguage["LABS_SEND"];?>">
                 <?php
                     use PHPMailer\PHPMailer\PHPMailer;
                     use PHPMailer\PHPMailer\SMTP;
@@ -80,15 +84,8 @@
                 ?>
             </form>
         </main>
-        <footer class="footer-container">
-            <a class="contacts" href="https://vk.com/maxim_falonse" target="_blank">
-                <img class="icon" src="../vk-logo.png">
-            </a>
-            <a class="contacts" href="https://www.instagram.com/falxns_/" target="_blank">
-                <img class="icon" src="../inst-logo.png">
-            </a>
-            <p class="email">maks.falonse@gmail.com</p>
-            <p class="phone">+375295656229</p>
-        </footer>
+        <?php 
+            include '../styles/footer.php';
+        ?>
     </body>
 </html>

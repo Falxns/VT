@@ -1,11 +1,14 @@
 <?php
     include './lab6route.php';
 ?>
+<?php
+    include './language.php';
+?>
 <!DOCTYPE html>
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Поддержка</title>
+        <title><?php echo $textLanguage["SUP_TITLE"];?></title>
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
@@ -15,38 +18,31 @@
             include '../styles/navigation.php';
         ?>
         <main>
-            <h2 class="block-main-header">Свяжитесь с нами:</h2>
+            <h2 class="block-main-header"><?php echo $textLanguage["SUP_HEADERSUP"];?></h2>
             <form class="user-form" action="" method="POST">
                 <section class="user-form_section">
-                    <label class="user-form_label" for="user-name">Ваше имя:</label>
+                    <label class="user-form_label" for="user-name"><?php echo $textLanguage["SUP_FORM_NAME"];?></label>
                     <input class="user-form_input" name="user-name" type="text" required>
                 </section>
                 <section class="user-form_section">
-                    <label class="user-form_label" for="user-email">Ваш номер:</label>
+                    <label class="user-form_label" for="user-email"><?php echo $textLanguage["SUP_FORM_NUMBER"];?></label>
                     <input class="user-form_input" name="user-email" type="text" >
                 </section>
                 <section class="user-form_section">
-                    <label class="user-form_label" for="user-subject">Электронный адрес:</label>
+                    <label class="user-form_label" for="user-subject"><?php echo $textLanguage["SUP_FORM_EMAIL"];?></label>
                     <input class="user-form_input" name="user-subject" type="text" required>
                 </section>
                 <section class="user-form_section">
-                    <label class="user-form_label" for="user-subject">Тема сообщения:</label>
+                    <label class="user-form_label" for="user-subject"><?php echo $textLanguage["SUP_FORM_SUBJ"];?></label>
                     <input class="user-form_input" name="user-subject" type="text">
                 </section>
-                <label class="user-form_label" for="user-message">Сообщение:</label>
+                <label class="user-form_label" for="user-message"><?php echo $textLanguage["SUP_FORM_MSG"];?></label>
                 <textarea class="user-form_message" name="user-message" id="user-message" cols="60" rows="10" required></textarea>
-                <input class="user-form_submit" type="submit" value="Отправить">
+                <input class="user-form_submit" type="submit" value="<?php echo $textLanguage["SUP_FORM_SEND"];?>">
             </form>
         </main>
-        <footer class="footer-container">
-            <a class="contacts" href="https://vk.com/maxim_falonse" target="_blank">
-                <img class="icon" src="../vk-logo.png">
-            </a>
-            <a class="contacts" href="https://www.instagram.com/falxns_/" target="_blank">
-                <img class="icon" src="../inst-logo.png">
-            </a>
-            <p class="email">maks.falonse@gmail.com</p>
-            <p class="phone">+375295656229</p>
-        </footer>
+        <?php 
+            include '../styles/footer.php';
+        ?>
     </body>
 </html>

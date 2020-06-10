@@ -2,6 +2,9 @@
     include './lab6route.php';
 ?>
 <?php
+    include './language.php';
+?>
+<?php
     const HOLIDAYS_FILE_NAME = '../holidays.txt';
     const DATE_FORMAT = 'd.m.Y';
     const HOLIDAY_FORMAT = 'd-m';
@@ -107,10 +110,11 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Лабораторная работа 3</title>
+        <title><?php echo $textLanguage["LABS_LAB"];?>3</title>
         <link rel="stylesheet" type="text/css" href="../styles/support.css">
         <link rel="stylesheet" type="text/css" href="../styles/nav.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
+        <link rel="stylesheet" type="text/css" href="../styles/support.css">
     </head>
     <body>
         <?php 
@@ -118,10 +122,10 @@
         ?>
         <main>
             <form action="<?php $_PHP_SELF ?>" id="lab-3" class="user-form">
-                <h2 class="block-main-header">Лабораторная работа 3, вариант 9</h2>
-                <label class="user-form_label" for="date-input">Введите дату доставки: </label>
+                <h2 class="block-main-header"><?php echo $textLanguage["LABS_LAB"];?>3,<?php echo $textLanguage["LABS_VAR"];?>9</h2>
+                <label class="user-form_label" for="date-input"><?php echo $textLanguage["LABS_DELIVERY"];?></label>
                 <input class="user-form_input" type="text" name="date" id="date" placeholder="ДД.ММ.ГГГГ" pattern="\d\d\.\d\d\.\d\d\d\d" title="ДД.ММ.ГГГГ" required value=<?php echo get_date()?>>
-                <input class="user-form_submit" type="submit" value="Send">
+                <input class="user-form_submit" type="submit" value="<?php echo $textLanguage["LABS_SEND"];?>">
                 <?php
                     if (isset($_GET['date']))
                     {
@@ -135,15 +139,8 @@
                 ?>
             </form>
         </main>
-        <footer class="footer-container">
-            <a class="contacts" href="https://vk.com/maxim_falonse" target="_blank">
-                <img class="icon" src="../vk-logo.png">
-            </a>
-            <a class="contacts" href="https://www.instagram.com/falxns_/" target="_blank">
-                <img class="icon" src="../inst-logo.png">
-            </a>
-            <p class="email">maks.falonse@gmail.com</p>
-            <p class="phone">+375295656229</p>
-        </footer>
+        <?php 
+            include '../styles/footer.php';
+        ?>
     </body>
 </html>
