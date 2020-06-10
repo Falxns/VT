@@ -4,7 +4,7 @@
     justify-content: space-around;
     min-height: 8vh;
 }
-.navigation li {
+.navigation_item {
     width: 100%;
     list-style: none;
     display: inline-block;
@@ -17,6 +17,10 @@
     color: whitesmoke;
     text-decoration: none;
     margin-right: auto;
+}
+.active {
+    border-bottom: 5px solid;
+    border-color: #f00;
 }
 @media(max-width: 750px) {
     .navtab{
