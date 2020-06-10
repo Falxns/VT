@@ -1,0 +1,28 @@
+.footer-container {
+    background-color: #DCDCDC;
+    margin: 1px 10px;
+    display: flex;
+}
+
+.contacts {
+    text-decoration: none;
+    color: black;
+    font-size: 0;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+}
+
+p {
+    font-size: 20px;
+    height: 25px;
+    margin: 2px;
+}
+
+.email {
+    width: 100%;
+    text-align: center;
+}
