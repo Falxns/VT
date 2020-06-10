@@ -1,0 +1,19 @@
+.lab_blue {
+    color: blue;
+    display: contents;
+    word-break: break-word;
+}
+.lab_red {
+    color: red;
+    display: contents;
+    word-break: break-word;
+}
+.lab_green {
+    color: green;
+    display: contents;
+    word-break: break-word;
+}
+.result-container {
+    width: 1000px;
+    height: 500px;
+}
